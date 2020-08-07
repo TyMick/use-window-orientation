@@ -18,8 +18,11 @@ export default function useWindowOrientation(
   defaultOrientation: Orientation = "portrait"
 ): OrientationResults {
   if (defaultOrientation !== "portrait" && defaultOrientation !== "landscape") {
+    const isString = typeof defaultOrientation === "string";
     throw new TypeError(
-      `${defaultOrientation} is not a valid orientation. Use "portrait" or "landscape".`
+      `${isString ? '"' : ""}${defaultOrientation}${
+        isString ? '"' : ""
+      } is not a valid orientation. Use "portrait" or "landscape".`
     );
   }
 
