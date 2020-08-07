@@ -32,7 +32,7 @@ export default function useWindowOrientation(
     throw new TypeError(
       `${isString ? '"' : ""}${defaultOrientation}${
         isString ? '"' : ""
-      } is not a valid orientation. Use "portrait" or "landscape".`
+      } is not a valid defaultOrientation. Use "portrait" or "landscape".`
     );
   }
 

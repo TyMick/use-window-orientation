@@ -19,7 +19,7 @@ function useWindowOrientation(options) {
     var _a = options.defaultOrientation, defaultOrientation = _a === void 0 ? "portrait" : _a;
     if (defaultOrientation !== "portrait" && defaultOrientation !== "landscape") {
         var isString = typeof defaultOrientation === "string";
-        throw new TypeError("" + (isString ? '"' : "") + defaultOrientation + (isString ? '"' : "") + " is not a valid orientation. Use \"portrait\" or \"landscape\".");
+        throw new TypeError("" + (isString ? '"' : "") + defaultOrientation + (isString ? '"' : "") + " is not a valid defaultOrientation. Use \"portrait\" or \"landscape\".");
     }
     var _b = react_1.useState(defaultOrientation), orientation = _b[0], setOrientation = _b[1];
     react_1.useEffect(function () {

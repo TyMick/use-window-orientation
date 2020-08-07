@@ -28,14 +28,14 @@ describe("Valid inputs", () => {
           });
         }).toThrow(
           new TypeError(
-            '"dazed and confused" is not a valid orientation. Use "portrait" or "landscape".'
+            '"dazed and confused" is not a valid defaultOrientation. Use "portrait" or "landscape".'
           )
         );
         expect(() => {
           shallowDummyOrientationComponent({ defaultOrientation: 42 });
         }).toThrow(
           new TypeError(
-            '42 is not a valid orientation. Use "portrait" or "landscape".'
+            '42 is not a valid defaultOrientation. Use "portrait" or "landscape".'
           )
         );
       });
