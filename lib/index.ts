@@ -17,6 +17,12 @@ interface OrientationResults {
 export default function useWindowOrientation(
   defaultOrientation: Orientation = "portrait"
 ): OrientationResults {
+  if (defaultOrientation !== "portrait" && defaultOrientation !== "landscape") {
+    throw new TypeError(
+      `${defaultOrientation} is not a valid orientation. Use "portrait" or "landscape".`
+    );
+  }
+
   const [orientation, setOrientation] = useState(defaultOrientation);
 
   useEffect(() => {

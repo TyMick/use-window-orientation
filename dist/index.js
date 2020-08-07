@@ -12,6 +12,9 @@ var lodash_debounce_1 = __importDefault(require("lodash.debounce"));
  */
 function useWindowOrientation(defaultOrientation) {
     if (defaultOrientation === void 0) { defaultOrientation = "portrait"; }
+    if (defaultOrientation !== "portrait" && defaultOrientation !== "landscape") {
+        throw new TypeError(defaultOrientation + " is not a valid orientation. Use \"portrait\" or \"landscape\".");
+    }
     var _a = react_1.useState(defaultOrientation), orientation = _a[0], setOrientation = _a[1];
     react_1.useEffect(function () {
         function handleResize() {
