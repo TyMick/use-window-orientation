@@ -1,0 +1,60 @@
+{
+  "name": "use-window-orientation",
+  "version": "0.0.1",
+  "description": "A React hook for using window orientation.",
+  "author": "Ty Mick <ty@tymick.me> (https://tymick.me)",
+  "repository": "github:tywmick/use-window-orientation",
+  "license": "Apache-2.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "npm run build && jest --verbose",
+    "preversion": "npm run test",
+    "version": "git add -A dist",
+    "postversion": "git push && git push --tags && npm publish"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0"
+  },
+  "dependencies": {
+    "lodash.debounce": "^4.0.8"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.1",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-react": "^7.10.4",
+    "@types/lodash.debounce": "^4.0.6",
+    "@types/react": "^16.9.44",
+    "babel-jest": "^26.2.2",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "jest": "^26.2.2",
+    "prettier": "^2.0.5",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
+    "typescript": "^3.9.7"
+  },
+  "keywords": [
+    "react",
+    "hook",
+    "hooks",
+    "orientation",
+    "window orientation",
+    "screen orientation",
+    "media queries",
+    "window dimensions",
+    "screen dimensions",
+    "portrait",
+    "landscape",
+    "responsive",
+    "responsive design",
+    "typescript"
+  ],
+  "bugs": {
+    "url": "https://github.com/tywmick/use-window-orientation/issues"
+  }
+}
