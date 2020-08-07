@@ -3,6 +3,10 @@ import debounce from "lodash.debounce";
 
 type Orientation = "portrait" | "landscape";
 
+interface OrientationOptions {
+  defaultOrientation?: Orientation;
+}
+
 interface OrientationResults {
   orientation: Orientation;
   portrait: boolean;
@@ -11,12 +15,18 @@ interface OrientationResults {
 
 /**
  * React hook for using window orientation. Not _device_ orientation—this hook determines orientation based on the width and height of the window.
- * @param {Orientation} [defaultOrientation] - The default orientation to return when there is no window
+ * @param {OrientationOptions} [options] - The options object
+ * @param {Orientation} [options.defaultOrientation=portrait] - The default orientation to return when there is no window
  * @returns {OrientationResults} An object containing the results of the orientation query in both string and boolean form
  */
 export default function useWindowOrientation(
-  defaultOrientation: Orientation = "portrait"
+  options: OrientationOptions = {}
 ): OrientationResults {
+  if (typeof options !== "object") {
+    throw new TypeError("The options argument must be formatted as an object.");
+  }
+  const { defaultOrientation = "portrait" } = options;
+
   if (defaultOrientation !== "portrait" && defaultOrientation !== "landscape") {
     const isString = typeof defaultOrientation === "string";
     throw new TypeError(
