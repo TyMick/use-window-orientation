@@ -6,10 +6,11 @@
 [![npm license](https://img.shields.io/npm/l/use-window-orientation)](/LICENSE)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0-ff69b4.svg)](/CODE_OF_CONDUCT.md)
 
-1. **[Installation](#installation)**
-2. **[Usage](#usage)**
-3. **[Options](#options)**
-4. **[Caveats](#caveats)**
+- **[Installation](#installation)**
+- **[Usage](#usage)**
+- **[Options](#options)**
+- **[Caveats](#caveats)**
+- **[Related projects](#related-projects)**
 
 Sometimes, just knowing [the window width](https://github.com/tywmick/use-window-width-breakpoints) isn't enough. Sometimes you want to know if the window's orientation is portrait or landscape. Good thing you found this React hook.
 
@@ -72,3 +73,7 @@ This hook has one optional parameter: an options object. There is currently only
 This hook only deals with the _window_ orientation, not the _device_ orientation. It calculates this orientation using `window.innerWidth` and `window.innerHeight`. It does not consult [`window.orientation`](https://developer.mozilla.org/en-US/docs/Web/API/Window/orientation) at all because that feature has been deprecated.
 
 Also, in the rare case that the window's width and height are equal, useWindowOrientation will just report the orientation as portrait.
+
+<h2 id="related-projects">Related projects</h2>
+
+- [useWindowWidthBreakpoints](https://github.com/tywmick/use-window-width-breakpoints)
