@@ -68,6 +68,12 @@ The possibilities are endless.
 
 This hook has one optional parameter: an options object. There is currently only one option, `defaultOrientation`, the default orientation you'd like to return if no window exists (such as if a search engine is crawling your page). Valid `defaultOrientation`s are `"portrait"` or `"landscape"`, and if you omit the option, it will default to `"portrait"`.
 
+```js
+const { orientation, portrait, landscape } = useWindowOrientation({
+  defaultOrientation: "portrait",
+});
+```
+
 <h2 id="caveats">Caveats</h2>
 
 This hook only deals with the _window_ orientation, not the _device_ orientation. It calculates this orientation using `window.innerWidth` and `window.innerHeight`. It does not consult [`window.orientation`](https://developer.mozilla.org/en-US/docs/Web/API/Window/orientation) at all because that feature has been deprecated.
