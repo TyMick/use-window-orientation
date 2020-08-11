@@ -12,10 +12,7 @@
   ],
   "scripts": {
     "build": "tsc",
-    "test": "npm run build && jest --verbose",
-    "preversion": "npm run test",
-    "version": "git add -A dist",
-    "postversion": "git push && git push --tags && npm publish"
+    "test": "npm run build && jest --verbose"
   },
   "peerDependencies": {
     "react": "^16.8.0"
