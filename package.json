@@ -13,6 +13,7 @@
   "files": [
     "/dist"
   ],
+  "sideEffects": false,
   "scripts": {
     "build": "microbundle",
     "dev": "microbundle watch",
