@@ -5,13 +5,17 @@
   "author": "Ty Mick <ty@tymick.me> (https://tymick.me)",
   "repository": "github:tywmick/use-window-orientation",
   "license": "Apache-2.0",
+  "source": "src/index.ts",
   "main": "dist/index.js",
+  "module": "dist/index.module.js",
+  "unpkg": "dist/index.umd.js",
   "types": "dist/index.d.ts",
   "files": [
     "/dist"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "microbundle",
+    "dev": "microbundle watch",
     "test": "npm run build && jest --verbose"
   },
   "peerDependencies": {
@@ -30,6 +34,7 @@
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "jest": "^26.2.2",
+    "microbundle": "^0.12.3",
     "prettier": "^2.0.5",
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
