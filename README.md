@@ -2,8 +2,8 @@
 
 [![npm version](https://img.shields.io/npm/v/use-window-orientation)](https://www.npmjs.com/package/use-window-orientation "View this package on npm")
 [![npm peer dependency version](https://img.shields.io/npm/dependency-version/use-window-orientation/peer/react)](https://www.npmjs.com/package/use-window-orientation "View this package on npm")
-[![npm bundle size](https://img.shields.io/bundlephobia/min/use-window-orientation)](https://www.npmjs.com/package/use-window-orientation "View this package on npm")
-[![npm license](https://img.shields.io/npm/l/use-window-orientation)](/LICENSE)
+[![npm bundle size](https://img.shields.io/bundlephobia/minzip/use-window-orientation)](https://bundlephobia.com/result?p=use-window-orientation "View this package on BundlePhobia")
+[![License: Apache-2.0](https://img.shields.io/npm/l/use-window-orientation)](/LICENSE)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0-ff69b4.svg)](/CODE_OF_CONDUCT.md)
 
 - **[Installation](#installation)**
@@ -52,9 +52,13 @@ const { portrait } = useWindowOrientation();
 What's this hook good for? Say you have two components, `Chart` and `Explanation`. You want `Explanation` to come first if the window is portrait, but you want `Chart` to come first if the window is landscape. Then arrange them in your JSX like this:
 
 ```jsx
-{portrait && <Explanation />}
-<Chart />
-{landscape && <Explanation />}
+{
+  portrait && <Explanation />;
+}
+<Chart />;
+{
+  landscape && <Explanation />;
+}
 ```
 
 Or say you want to creep out your users by divining the orientation of their window:
