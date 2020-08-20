@@ -52,13 +52,9 @@ const { portrait } = useWindowOrientation();
 What's this hook good for? Say you have two components, `Chart` and `Explanation`. You want `Explanation` to come first if the window is portrait, but you want `Chart` to come first if the window is landscape. Then arrange them in your JSX like this:
 
 ```jsx
-{
-  portrait && <Explanation />;
-}
+{portrait && <Explanation />}
 <Chart />;
-{
-  landscape && <Explanation />;
-}
+{landscape && <Explanation />}
 ```
 
 Or say you want to creep out your users by divining the orientation of their window:
