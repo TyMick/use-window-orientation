@@ -21,7 +21,7 @@
   },
   "np": {
     "yarn": false
-  },  
+  },
   "peerDependencies": {
     "react": ">=16.8.0"
   },
