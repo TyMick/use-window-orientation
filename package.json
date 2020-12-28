@@ -19,6 +19,9 @@
     "dev": "microbundle watch",
     "test": "npm run build && jest --verbose"
   },
+  "np": {
+    "yarn": false
+  },  
   "peerDependencies": {
     "react": ">=16.8.0"
   },
