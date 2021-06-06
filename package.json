@@ -1,6 +1,6 @@
 {
   "name": "use-window-orientation",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A React hook for using window orientation.",
   "author": "Ty Mick <ty@tymick.me> (https://tymick.me)",
   "repository": "https://github.com/tywmick/use-window-orientation.git",
