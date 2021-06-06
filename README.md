@@ -83,32 +83,15 @@ Also, in the rare case that the window's width and height are equal, useWindowOr
 
 <h2 id="contributing">Contributing</h2>
 
-If you'd like to contribute to this project (which would be awesome), here's how to set it up:
+If you'd like to contribute to this project (which would be awesome), the easiest way to set it up would be to install the [GitHub CLI](https://cli.github.com/) and then run the following:
 
-1. [Fork this repository](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo) to your own GitHub account.
+```sh
+gh repo fork tywmick/use-window-orientation --clone=true
+cd use-window-orientation
+npm install
+```
 
-2. Clone it to your device.
-
-   ```sh
-   git clone https://github.com/YOUR_USERNAME/use-window-orientation.git
-   ```
-
-3. Add this repository as a remote, so you can pull upstream changes in the future with `git pull upstream master`.
-
-   ```sh
-   cd use-window-orientation
-   git remote add upstream https://github.com/tywmick/use-window-orientation.git
-   ```
-
-4. Install dependencies.
-
-   ```sh
-   npm install
-   ```
-
-   - Don't worry about the [high security vulnerability](https://github.com/developit/microbundle/issues/695) in `serialize-javascript` that npm brings up—the vulnerable code [isn't used by Microbundle](https://github.com/developit/microbundle/issues/695#issuecomment-672773094).
-
-Now, you can build the package with `npm run build`, build _and_ watch for changes with `npm run dev` (automatically rebuilding on each change in the source), and run the test suite with `npm run test`.
+Now, you can build the package with `npm run build`, build _and_ watch for changes with `npm run dev` (automatically rebuilding on each change in the source), run the test suite with `npm run test`, and create pull requests with [`gh pr create`](https://cli.github.com/manual/gh_pr_create).
 
 After building the package, you can test it in another project on your machine by [adding the local path](https://docs.npmjs.com/files/package.json#local-paths) as a dependency (e.g., by running `npm install /path/to/local/use-window-orientation` in that other project).
 
