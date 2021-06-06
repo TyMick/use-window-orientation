@@ -39,17 +39,23 @@ export default function useWindowOrientation(
   const [orientation, setOrientation] = useState(defaultOrientation);
 
   useEffect(() => {
-    function handleResize(): void {
-      if (window.innerWidth <= window.innerHeight) {
-        setOrientation("portrait");
-      } else {
-        setOrientation("landscape");
-      }
-    }
+    const handleResize = debounce(
+      () => {
+        if (window.innerWidth <= window.innerHeight) {
+          setOrientation("portrait");
+        } else {
+          setOrientation("landscape");
+        }
+      },
+      400,
+      { leading: true, trailing: true }
+    );
     handleResize();
-    window.addEventListener("resize", debounce(handleResize, 400));
+    window.addEventListener("resize", handleResize);
+
     return () => {
-      window.removeEventListener("resize", debounce(handleResize, 400));
+      window.removeEventListener("resize", handleResize);
+      handleResize.cancel();
     };
   }, []);
 
